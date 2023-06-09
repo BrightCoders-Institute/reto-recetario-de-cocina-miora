@@ -12,7 +12,7 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
-import {useColorScheme} from 'react-native/types';
+import {useColorScheme} from 'react-native';
 
 function App(): JSX.Element {
   const theme = useColorScheme();
