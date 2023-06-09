@@ -1,34 +1,59 @@
 import React from 'react';
 import { ScrollView, View, StyleSheet, Text } from 'react-native';
+import recipes from '../data/recipes.json';
+import ListItem from './ListItem';
 
-const HorizontalScrollList = () => {
+const HorizontalScrollList = ({ title }: { title: string }) => {
   return (
-    <ScrollView horizontal>
-      <Text>Items</Text>
-      <View style={styles.item}>
-        <Text>Pizza</Text>
-      </View>
-      <View style={styles.item}>
-        <Text>Item 2</Text>
-      </View>
-      <View style={styles.item}>
-        <Text>Item 3</Text>
-      </View>
-      {/* Agrega más elementos según sea necesario */}
-    </ScrollView>
+    <View>
+      <Text style={styles.titleText}>{title}</Text>
+      <ScrollView horizontal style={styles.horizontalScrollList}>
+        {recipes.recipes.map((recipe, index) => (
+          <View style={styles.item}>
+            <ListItem
+              key={index}
+              image={recipe.imgUrl}
+              title={recipe.name}
+            />
+          </View>
+        ))}
+
+        {/* Elementos extras*/}
+        <View style={styles.item}>
+          <Text>Pizza</Text>
+        </View>
+        <View style={styles.item}>
+          <Text>Item 2</Text>
+        </View>
+        <View style={styles.item}>
+          <Text>Item 3</Text>
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  horizontalScrollList: {
+    marginHorizontal: 5,
+    marginBottom: 10,
+  },
   item: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 200,
-    height: 200,
-    marginHorizontal: 10,
+    width: 140,
+    height: 180,
+    marginHorizontal: 5,
     backgroundColor: 'lightgray',
     margin:10,
+  },
+  titleText: {
+    fontSize: 20,
+    textTransform: 'uppercase',
+    marginHorizontal: 15,
+    marginVertical: 10,
+    color: '#d01b65',
   },
 });
 

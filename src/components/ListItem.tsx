@@ -1,14 +1,18 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
-import {ListItemProps} from '../interfaces/interfaces';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { ListItemProps } from '../interfaces/interfaces';
 
-const ListItem: React.FC<ListItemProps> = ({image, title, subtitle}) => {
+const ListItem: React.FC<ListItemProps> = ({ image, title }) => {
   return (
     <View style={styles.container}>
-      <Image source={{uri: image}} style={styles.image} />
+      <View style={styles.imageContainer}>
+        <Image
+          source={{ uri: image }}
+          style={styles.image} />
+      </View>
+
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
     </View>
   );
@@ -16,22 +20,24 @@ const ListItem: React.FC<ListItemProps> = ({image, title, subtitle}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 8,
+    flexDirection: 'column',
+  },
+  imageContainer: {
+    height: 140,
+    justifyContent: 'flex-start',
   },
   image: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    marginRight: 16,
+    width: 130,
+    height: '100%',
+    borderRadius: 5,
   },
   textContainer: {
-    flex: 1,
+    height: 35,
+    marginTop: 5,
   },
   title: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    borderColor: '#d01b65',
+    fontSize: 14,
   },
   subtitle: {
     fontSize: 14,
