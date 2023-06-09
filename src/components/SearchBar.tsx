@@ -10,9 +10,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
   return (
     <TextInput
       style={styles.input}
-      value={value}
+      value=''
       onChangeText={onChangeText}
-      placeholder={placeholder}
+      placeholder='Search'
     />
   );
 };
@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     paddingHorizontal: 10,
+    borderRadius: 40,
+    margin: 10,
   },
 });
 

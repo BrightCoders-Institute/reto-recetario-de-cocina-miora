@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginHorizontal: 10,
     backgroundColor: 'lightgray',
+    margin:10,
   },
 });
 
