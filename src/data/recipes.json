@@ -1,0 +1,72 @@
+{
+  "recipes": [
+    {
+      "name": "Flan Napolitano",
+      "ingredients": [
+        {
+          "ingredient": "azúcar refinada",
+          "quantity": "3 tazas"
+        },
+        {
+          "ingredient": "Leche Condensada",
+          "quantity": "1 Lata"
+        },
+        {
+          "ingredient": "Huevos",
+          "quantity": "3 pcs"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/54c6cbcbc6d611e056122d64560cd9c1.webp?itok=Ekj0Kgv-",
+      "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "name": "Carlota de Limon",
+      "ingredients": [
+        {
+          "ingredient": "azúcar refinada",
+          "quantity": "3 tazas"
+        },
+        {
+          "ingredient": "Leche Condensada",
+          "quantity": "1 Lata"
+        },
+        {
+          "ingredient": "Jugo de limón colado",
+          "quantity": "1/2 Taza"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/d9c0fccbf7e1be95fc921c9eb312ae1c.webp?itok=fjJZiAKV",
+      "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "name": "Tortas de Arroz",
+      "ingredients": [
+        {
+          "ingredient": "arroz cocido",
+          "quantity": "3 tazas"
+        },
+        {
+          "ingredient": "Qeso panela rallado",
+          "quantity": "1/2 Taza"
+        },
+        {
+          "ingredient": "Ramas de perejil",
+          "quantity": "4 pcs"
+        },
+        {
+          "ingredient": "Chile serrano ",
+          "quantity": "1/2 pcs"
+        },
+        {
+          "ingredient": "Chile serrano ",
+          "quantity": "1/2 pcs"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2e61125eb6da4fcc898e0b4c57cbfcfe.webp?itok=0cMFuEU9",
+      "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    }
+  ]
+}
