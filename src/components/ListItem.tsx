@@ -1,20 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { ListItemProps } from '../interfaces/interfaces';
 
 const ListItem: React.FC<ListItemProps> = ({ image, title }) => {
+  const navigation = useNavigation();
+  const handlePress = () => {
+    navigation.navigate('Details');
+  };
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image
-          source={{ uri: image }}
-          style={styles.image} />
-      </View>
+    <TouchableOpacity onPress={handlePress}>
+      <View style={styles.container}>
+        <View style={styles.imageContainer}>
+          <Image
+            source={{ uri: image }}
+            style={styles.image} />
+        </View>
 
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
