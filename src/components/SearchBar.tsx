@@ -1,6 +1,6 @@
 import React from 'react';
-import {TextInput, StyleSheet} from 'react-native';
-import {SearchBarProps} from '../interfaces/interfaces';
+import { TextInput, StyleSheet, View } from 'react-native';
+import { SearchBarProps } from '../interfaces/interfaces';
 
 const SearchBar: React.FC<SearchBarProps> = ({
   value,
@@ -8,12 +8,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
   placeholder,
 }) => {
   return (
-    <TextInput
-      style={styles.input}
-      value={value}
-      onChangeText={onChangeText}
-      placeholder={placeholder}
-    />
+    <View>
+      <TextInput
+        style={styles.input}
+        value={value}
+        onChangeText={onChangeText}
+        placeholder={placeholder}
+      />
+    </View>
   );
 };
 
@@ -23,6 +25,8 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     paddingHorizontal: 10,
+    marginHorizontal: 10,
+    borderRadius: 20,
   },
 });
 
