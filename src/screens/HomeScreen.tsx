@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
+import HorizontalScrollList from '../components/HorizontalScrollList';
 
 export default function HomeScreen(props: any) {
   const {navigation} = props;
@@ -12,6 +13,7 @@ export default function HomeScreen(props: any) {
     <View>
       <Text>Home Screen</Text>
       <Button onPress={goToDetails} title="Go to details" />
+      <HorizontalScrollList />
     </View>
   );
 }
