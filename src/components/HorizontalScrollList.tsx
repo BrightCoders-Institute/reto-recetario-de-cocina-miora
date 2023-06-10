@@ -9,11 +9,12 @@ const HorizontalScrollList = ({ title }: { title: string }) => {
       <Text style={styles.titleText}>{title}</Text>
       <ScrollView horizontal style={styles.horizontalScrollList}>
         {recipes.recipes.map((recipe, index) => (
-          <View style={styles.item}>
+          <View style={styles.item} key={index}>
             <ListItem
               key={index}
               image={recipe.imgUrl}
               title={recipe.name}
+              index={index}
             />
           </View>
         ))}

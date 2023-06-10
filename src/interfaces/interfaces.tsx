@@ -7,6 +7,7 @@ export interface SearchBarProps {
 export interface ListItemProps {
   image: string;
   title: string;
+  index: number;
 }
 
 export interface HorizontalListProps<T> {
