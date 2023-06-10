@@ -3,8 +3,7 @@ import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {ListItemProps} from '../interfaces/interfaces';
 
-const ListItem: React.FC<ListItemProps> = ({image, title}) => {
-const ListItem: React.FC<ListItemProps> = ({ image, title, index }) => {
+const ListItem: React.FC<ListItemProps> = ({image, title, index}) => {
   const navigation = useNavigation();
   const handlePress = () => {
     navigation.navigate('Details', {
