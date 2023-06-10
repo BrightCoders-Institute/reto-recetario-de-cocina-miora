@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
   useColorScheme,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
-import {ListItemProps} from '../interfaces/interfaces';
+import { useNavigation } from '@react-navigation/native';
+import { ListItemProps } from '../interfaces/interfaces';
 
-const ListItem: React.FC<ListItemProps> = ({image, title, index}) => {
+const ListItem: React.FC<ListItemProps> = ({ image, title, index }) => {
   const theme = useColorScheme();
   const navigation = useNavigation();
   const handlePress = () => {
@@ -43,12 +43,10 @@ const ListItem: React.FC<ListItemProps> = ({image, title, index}) => {
     textContainer: {
       height: '20%',
       marginTop: 5,
-      backgroundColor: theme === 'dark' ? 'black' : 'white',
     },
     title: {
       borderColor: '#d01b65',
       fontSize: 14,
-      marginLeft: 5,
       color: theme === 'dark' ? 'white' : 'black',
     },
     subtitle: {
@@ -61,7 +59,7 @@ const ListItem: React.FC<ListItemProps> = ({image, title, index}) => {
     <TouchableOpacity onPress={handlePress} style={styles.touchable}>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <Image source={{uri: image}} style={styles.image} />
+          <Image source={{ uri: image }} style={styles.image} />
         </View>
 
         <View style={styles.textContainer}>

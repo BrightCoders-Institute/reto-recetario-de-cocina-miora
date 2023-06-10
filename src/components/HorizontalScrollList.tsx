@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, View, StyleSheet, Text} from 'react-native';
+import { ScrollView, View, StyleSheet, Text } from 'react-native';
 import recipes from '../data/recipes.json';
 import ListItem from './ListItem';
 
@@ -24,7 +24,6 @@ const HorizontalScrollList = ({
       width: widthItem,
       height: heightItem,
       marginHorizontal: 5,
-      backgroundColor: 'lightgray',
     },
     titleText: {
       fontSize: 20,

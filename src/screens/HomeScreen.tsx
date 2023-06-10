@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View} from 'react-native';
 import HorizontalScrollList from '../components/HorizontalScrollList';
 import Searchbar from '../components/SearchBar';
 
@@ -14,7 +14,6 @@ export default function HomeScreen(props: any) {
   const sizeRecent = {width: 180, height: 240};
   return (
     <View>
-      <Text>Home Screen</Text>
       <Searchbar placeholder="What do you want to eat?" />
       <HorizontalScrollList
         title="Trending"
@@ -26,7 +25,6 @@ export default function HomeScreen(props: any) {
         heightItem={sizeRecent.height}
         widthItem={sizeRecent.width}
       />
-      <Button onPress={goToDetails} title="Go to details" />
     </View>
   );
 }
