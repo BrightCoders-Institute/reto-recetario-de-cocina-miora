@@ -1,20 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { ListItemProps } from '../interfaces/interfaces';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {ListItemProps} from '../interfaces/interfaces';
 
-const ListItem: React.FC<ListItemProps> = ({ image, title }) => {
+const ListItem: React.FC<ListItemProps> = ({image, title}) => {
   const navigation = useNavigation();
   const handlePress = () => {
     navigation.navigate('Details');
   };
   return (
-    <TouchableOpacity onPress={handlePress}>
+    <TouchableOpacity onPress={handlePress} style={styles.touchable}>
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          <Image
-            source={{ uri: image }}
-            style={styles.image} />
+          <Image source={{uri: image}} style={styles.image} />
         </View>
 
         <View style={styles.textContainer}>
@@ -26,25 +24,34 @@ const ListItem: React.FC<ListItemProps> = ({ image, title }) => {
 };
 
 const styles = StyleSheet.create({
+  touchable: {
+    padding: 0,
+    margin: 0,
+    width: '100%',
+    height: '100%',
+  },
   container: {
     flexDirection: 'column',
+    height: '100%',
   },
   imageContainer: {
-    height: 140,
+    height: '80%',
+    width: '100%',
     justifyContent: 'flex-start',
   },
   image: {
-    width: 130,
+    width: '100%',
     height: '100%',
     borderRadius: 5,
   },
   textContainer: {
-    height: 35,
+    height: '20%',
     marginTop: 5,
   },
   title: {
     borderColor: '#d01b65',
     fontSize: 14,
+    marginLeft: 5,
   },
   subtitle: {
     fontSize: 14,
