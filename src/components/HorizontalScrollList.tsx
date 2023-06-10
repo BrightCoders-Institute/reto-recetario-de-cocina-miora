@@ -1,16 +1,19 @@
 import React from 'react';
-import { ScrollView, View, StyleSheet, Text } from 'react-native';
-import recipes from '../data/recipes.json';
+import {ScrollView, View, StyleSheet, Text} from 'react-native';
+//import recipes from '../data/recipes.json';
 import ListItem from './ListItem';
+import {Recipe} from '../types/Recipes';
 
 const HorizontalScrollList = ({
   title,
   widthItem,
   heightItem,
+  data,
 }: {
   title: string;
   widthItem: number;
   heightItem: number;
+  data: Recipe;
 }) => {
   const styles = StyleSheet.create({
     horizontalScrollList: {
@@ -33,32 +36,20 @@ const HorizontalScrollList = ({
       color: '#d01b65',
     },
   });
-
   return (
     <View>
       <Text style={styles.titleText}>{title}</Text>
       <ScrollView horizontal style={styles.horizontalScrollList}>
-        {recipes.recipes.map((recipe, index) => (
+        {data.map((recipe, index) => (
           <View style={styles.item} key={index}>
             <ListItem
               key={index}
               image={recipe.imgUrl}
               title={recipe.name}
-              index={index}
+              index={recipe._id}
             />
           </View>
         ))}
-
-        {/* Elementos extras*/}
-        <View style={styles.item}>
-          <Text>Pizza</Text>
-        </View>
-        <View style={styles.item}>
-          <Text>Item 2</Text>
-        </View>
-        <View style={styles.item}>
-          <Text>Item 3</Text>
-        </View>
       </ScrollView>
     </View>
   );
