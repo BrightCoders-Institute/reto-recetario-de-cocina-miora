@@ -1,13 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TextInput, StyleSheet, View, useColorScheme} from 'react-native';
 import {SearchBarProps} from '../interfaces/interfaces';
+import data from '../data/recipes.json';
 
-const SearchBar: React.FC<SearchBarProps> = ({
-  value,
-  onChangeText,
-  placeholder,
-}) => {
+const SearchBar: React.FC<SearchBarProps> = ({handleSearch, placeholder}) => {
   const theme = useColorScheme();
+  const [value, setValue] = useState('');
 
   const styles = StyleSheet.create({
     input: {
@@ -19,14 +17,27 @@ const SearchBar: React.FC<SearchBarProps> = ({
       borderRadius: 20,
       color: theme === 'dark' ? 'white' : 'black',
     },
+    container: {
+      marginTop: 10,
+    },
   });
 
+  const handleTextChange = (text: string) => {
+    setValue(text);
+    let filteredRecipes = data.recipes;
+    if (text.length > 0) {
+      filteredRecipes = data.recipes.filter(recipe => {
+        return recipe.name.toLowerCase().includes(text.toLowerCase());
+      });
+    }
+    handleSearch(filteredRecipes);
+  };
   return (
-    <View>
+    <View style={styles.container}>
       <TextInput
         style={styles.input}
+        onChangeText={handleTextChange}
         value={value}
-        onChangeText={onChangeText}
         placeholder={placeholder}
         placeholderTextColor={theme === 'dark' ? 'white' : 'black'}
       />

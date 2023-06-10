@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import HorizontalScrollList from '../components/HorizontalScrollList';
 import Searchbar from '../components/SearchBar';
 import data from '../data/recipes.json';
+import {Recipe} from '../types/Recipes';
 
 export default function HomeScreen() {
   const [dataToShow, setDataShow] = useState(data.recipes);
@@ -16,16 +17,15 @@ export default function HomeScreen() {
   const sizeTrending = {width: 140, height: 180};
   const sizeRecent = {width: 180, height: 240};
 
-  const handleSearch = () => {
-    setDataShow([]);
+  const handleSearch = (search: Recipe) => {
+    setDataShow(search);
   };
 
   return (
     <View>
       <Searchbar
         placeholder="What do you want to eat?"
-        value=""
-        onChangeText={handleSearch}
+        handleSearch={handleSearch}
       />
       <HorizontalScrollList
         title="Trending"
