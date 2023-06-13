@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {Text, Image, StyleSheet, ScrollView} from 'react-native';
 import recipes from '../data/recipes.json';
+import IngredientsList from '../components/IngredientsList';
 
 export default function DetailsScreen({route}: any) {
 
@@ -9,24 +10,20 @@ export default function DetailsScreen({route}: any) {
 
   console.log(route.params);
   return (
-    <View>
+    <ScrollView>
       <Text>{name}</Text>
-      {ingredients.map((ingredient, i) => (
-          <View key={i}>
-            <Text>{ingredient.ingredient}</Text>
-            <Text>{ingredient.quantity}</Text>
-          </View>
-      ))}
       <Text>{category}</Text>
       <Text>{aditionalInfo}</Text>
       <Image source={{uri: imgUrl}} style={styles.image} />
-    </View>
+
+      <IngredientsList info={aditionalInfo} ingredients={ingredients}/>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   image: {
-    width: 400,
+    width: 'auto',
     height: 400,
   },
 });

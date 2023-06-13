@@ -1,6 +1,7 @@
+import {Recipe} from '../types/Recipes';
+
 export interface SearchBarProps {
-  value: string;
-  onChangeText: (text: string) => void;
+  handleSearch: (search: Recipe) => void;
   placeholder: string;
 }
 
@@ -12,5 +13,5 @@ export interface ListItemProps {
 
 export interface HorizontalListProps<T> {
   data: T[];
-  renderItem: ({ item }: { item: T }) => React.ReactNode;
+  renderItem: ({item}: {item: T}) => React.ReactNode;
 }

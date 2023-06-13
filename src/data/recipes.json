@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "_id": 0,
       "name": "Flan Napolitano",
       "ingredients": [
         {
@@ -21,6 +22,7 @@
       "aditionalInfo": "For 2 serving"
     },
     {
+      "_id": 1,
       "name": "Carlota de Limon",
       "ingredients": [
         {
@@ -41,6 +43,7 @@
       "aditionalInfo": "For 2 serving"
     },
     {
+      "_id": 2,
       "name": "Tortas de Arroz",
       "ingredients": [
         {
@@ -65,7 +68,218 @@
         }
       ],
       "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/2e61125eb6da4fcc898e0b4c57cbfcfe.webp?itok=0cMFuEU9",
+      "category": "Recent",
+      "aditionalInfo": "For 1 serving"
+    },
+    {
+      "_id": 3,
+      "name": "Brownies",
+      "ingredients": [
+        {
+          "ingredient": "Mantequilla fundida",
+          "quantity": "1 barra"
+        },
+        {
+          "ingredient": "Leche Condensada",
+          "quantity": "1/2 Lata"
+        },
+        {
+          "ingredient": "Huevos",
+          "quantity": "1 pcs"
+        },
+        {
+          "ingredient": "Polvo para hornear",
+          "quantity": "1 cucharadita"
+        },
+        {
+          "ingredient": "Menta fresca",
+          "quantity": "6 hojas"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/cde835a2693e7dffdd8d82dca524dbe1.webp?itok=pfd0901f",
+      "category": "Recent",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 4,
+      "name": "Dip de espinacas",
+      "ingredients": [
+        {
+          "ingredient": "Mantequilla",
+          "quantity": "1 cucharadita"
+        },
+        {
+          "ingredient": "Espinaca lavadas",
+          "quantity": "3 tazas"
+        },
+        {
+          "ingredient": "Lata Leche Evaporada",
+          "quantity": "1 Lata"
+        },
+        {
+          "ingredient": "Sal con ajo",
+          "quantity": "1 cucharadita"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/1192c449855d016d751121db91f3e529.webp?itok=ItIWWFfW",
       "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 5,
+      "name": "Dip de arroz",
+      "ingredients": [
+        {
+          "ingredient": "Media Crema",
+          "quantity": "1 envase"
+        },
+        {
+          "ingredient": "Chile chipotle adobado molido",
+          "quantity": "1 cucharadita"
+        },
+        {
+          "ingredient": "Sal con cebolla en polvo",
+          "quantity": "1 cucharadita"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/3f1e21fbf25b60aef914a43829d9d86a.webp?itok=WTgQB-tc",
+      "category": "Recent",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 6,
+      "name": "Tacos Gobernador",
+      "ingredients": [
+        {
+          "ingredient": "aceite vegetal",
+          "quantity": "2 cucharaditas"
+        },
+        {
+          "ingredient": "cebolla picada finamente",
+          "quantity": "3/4 taza"
+        },
+        {
+          "ingredient": "Ajo picado",
+          "quantity": "2 dientes"
+        },
+        {
+          "ingredient": "Chiles poblano",
+          "quantity": "2 pcs"
+        },
+        {
+          "ingredient": "Jitomates sin semillas y cortados en cubo",
+          "quantity": "3 pcs"
+        },
+        {
+          "ingredient": "Camarones limpios",
+          "quantity": "500 gr"
+        },
+        {
+          "ingredient": "Torillas",
+          "quantity": "10 pcs"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/641f939b73bfa9eff41cf7ba6e814a44.webp?itok=qrSzY3vc",
+      "category": "Recent",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 7,
+      "name": "Croquetas de Papa",
+      "ingredients": [
+        {
+          "ingredient": "Papas cocidas y hechas puré",
+          "quantity": "6 pcs"
+        },
+        {
+          "ingredient": "Jamón de pavo cortado en cubitos pequeños",
+          "quantity": "200gr"
+        },
+        {
+          "ingredient": "Queso tipo manchego rallado",
+          "quantity": "150 gr"
+        },
+        {
+          "ingredient": "erejil desinfectado y picado finamente",
+          "quantity": "2 ramitas"
+        },
+        {
+          "ingredient": "Harina de maíz",
+          "quantity": "1/4 taza"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/4c38e68300c840a7a6c049b1c656b7aa.webp?itok=N5WLXZ2W",
+      "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 8,
+      "name": "Pescado empanizado",
+      "ingredients": [
+        {
+          "ingredient": "sal",
+          "quantity": "1/4 cucharadita"
+        },
+        {
+          "ingredient": "pimienta negra molida",
+          "quantity": "1/4 cucharadita"
+        },
+        {
+          "ingredient": "Filetes de pescado",
+          "quantity": "4 pcs"
+        },
+        {
+          "ingredient": "Harina de trigo pasada por un colador",
+          "quantity": "1 taza"
+        },
+        {
+          "ingredient": "Huevos batidos",
+          "quantity": "2 pcs"
+        },
+        {
+          "ingredient": "Pan molido",
+          "quantity": "1 taza"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/7d9569874fc47cc7672783e49833a2bd.webp?itok=vtzbwaxd",
+      "category": "Trending",
+      "aditionalInfo": "For 2 serving"
+    },
+    {
+      "_id": 9,
+      "name": "Pechuga Cordon Bleu",
+      "ingredients": [
+        {
+          "ingredient": "Milanesas de pollo (150 g c/u)",
+          "quantity": "4 pcs"
+        },
+        {
+          "ingredient": "Rebanadas de jamón",
+          "quantity": "4 pcs"
+        },
+        {
+          "ingredient": "Queso tipo manchego",
+          "quantity": "4 Rebanadas "
+        },
+        {
+          "ingredient": "Huevos ligeramente batidos",
+          "quantity": "2 pcs"
+        },
+        {
+          "ingredient": "sal",
+          "quantity": "1/2 cucharadita"
+        },
+        {
+          "ingredient": "pimienta negra molida",
+          "quantity": "1/4 cucharadita"
+        },
+        {
+          "ingredient": "Pan molido",
+          "quantity": "1 1/2 tazas"
+        }
+      ],
+      "imgUrl": "https://www.recetasnestle.com.mx/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/471155cee2e008cf3cb125337122cad9.webp?itok=h5GTXk8a",
+      "category": "Recent",
       "aditionalInfo": "For 2 serving"
     }
   ]
