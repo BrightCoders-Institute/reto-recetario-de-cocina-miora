@@ -1,7 +1,9 @@
 import React from 'react';
-import {Text, Image, StyleSheet, ScrollView} from 'react-native';
+import { ScrollView } from 'react-native';
 import recipes from '../data/recipes.json';
 import IngredientsList from '../components/IngredientsList';
+import ImageDetails from '../components/ImageDetails';
+
 
 export default function DetailsScreen({route}: any) {
 
@@ -10,20 +12,13 @@ export default function DetailsScreen({route}: any) {
 
   console.log(route.params);
   return (
-    <ScrollView>
-      <Text>{name}</Text>
-      <Text>{category}</Text>
-      <Text>{aditionalInfo}</Text>
-      <Image source={{uri: imgUrl}} style={styles.image} />
 
-      <IngredientsList info={aditionalInfo} ingredients={ingredients}/>
-    </ScrollView>
+<>
+
+<ImageDetails name={name} category={category} imgUrl={imgUrl} />
+ <ScrollView>
+  <IngredientsList info={aditionalInfo} ingredients={ingredients}/>
+</ScrollView>
+</>
   );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    width: 'auto',
-    height: 400,
-  },
-});
