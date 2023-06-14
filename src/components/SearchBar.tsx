@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {TextInput, StyleSheet, View, useColorScheme} from 'react-native';
-import {SearchBarProps} from '../interfaces/interfaces';
+import React, { useState } from 'react';
+import { TextInput, StyleSheet, View, useColorScheme } from 'react-native';
+import { SearchBarProps } from '../interfaces/interfaces';
 import data from '../data/recipes.json';
 
-const SearchBar: React.FC<SearchBarProps> = ({handleSearch, placeholder}) => {
+const SearchBar: React.FC<SearchBarProps> = ({ handleSearch, placeholder }) => {
   const theme = useColorScheme();
   const [value, setValue] = useState('');
 
@@ -18,7 +18,8 @@ const SearchBar: React.FC<SearchBarProps> = ({handleSearch, placeholder}) => {
       color: theme === 'dark' ? 'white' : 'black',
     },
     container: {
-      marginTop: 10,
+      marginTop: 20,
+      marginBottom: 30,
     },
   });
 
