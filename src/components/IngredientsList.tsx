@@ -1,13 +1,18 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 
+interface ingredientType {
+  quantity: string,
+  ingredient: string
+}
+
 export default function IngredientsList({info, ingredients}:any) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Ingredients</Text>
       <Text style={styles.subTitle}>{info}</Text>
 
-    {ingredients.map((item, index) => (
+    {ingredients.map((item: ingredientType, index: number) => (
       <View key={index} style={styles.listContainer}>
         <Text style={styles.listItem}>{item.ingredient}</Text>
         <Text style={styles.listItem}>{item.quantity}</Text>
