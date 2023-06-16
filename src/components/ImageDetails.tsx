@@ -1,9 +1,8 @@
 import React from 'react';
-import { Text, Image, StyleSheet, ScrollView, View } from 'react-native';
-import { CloseButton } from './CloseButton';
-import { ShareButton } from './ShareButton';
-import { FavButton } from './FavButton';
-
+import {Text, Image, StyleSheet, View} from 'react-native';
+import {CloseButton} from './CloseButton';
+import {ShareButton} from './ShareButton';
+import {FavButton} from './FavButton';
 
 interface ImageDetailsProps {
   name: string;
@@ -11,20 +10,21 @@ interface ImageDetailsProps {
   imgUrl: string;
 }
 
-const ImageDetails: React.FC<ImageDetailsProps> = ({ name, category, imgUrl }) => {
-
+const ImageDetails: React.FC<ImageDetailsProps> = ({
+  name,
+  category,
+  imgUrl,
+}) => {
   return (
-
     <>
-      <CloseButton />
-      <ShareButton />
-      <FavButton />
+      <CloseButton testID="close-button" />
+      <ShareButton testID="share-button" />
+      <FavButton testID="fav-button" />
       <Text style={styles.textName}>{name}</Text>
       <Text style={styles.textCategory}>{category}</Text>
       <View style={styles.filter} />
-      <Image source={{ uri: imgUrl }} style={styles.image} />
+      <Image source={{uri: imgUrl}} style={styles.image} />
     </>
-
   );
 };
 
